@@ -75,3 +75,7 @@ Please make sure to enable in Info.plist
 ### Short tutorial
 
 ![MSActionSheet: Customized ActionSheet for taking photo from library / front / rear camera](https://github.com/MaorS/MSActionSheet/blob/master/Example/media/fullActionSheet.gif?raw=true)
+
+
+# License
+MSActionSheet is available under the MIT license. See the LICENSE file for more info.
