@@ -12,20 +12,57 @@ class ViewController: UIViewController {
     
     @IBAction func selectImageAction(_ sender: UIButton) {
         
-        MSActionSheet.instance.showFullActionSheet(on: self){ (image) in
-            sender.setImage(image, for: .normal)
+        // Example 1 - Show full actionsheet, include library, front camera, rear camera
+        
+        MSActionSheet(viewController: self, sourceView: sender).showFullActionSheet {
+            sender.setImage($0, for: .normal)
         }
         
+        //  Example 2 - Create custom actionsheet with default params
         
-       /*
-        let sheet = MSActionSheet.instance
-        sheet.create()
-            .addCancelButton()
-            .addLibrary()
-            .addFrontCamera()
-            .addRearCamera().show(on: self) { (image) in
-                sender.setImage(image, for: .normal)
-        }
+        /*
+         
+         MSActionSheet(viewController: self, sourceView: sender)
+         .add(.cancel)
+         .add(.library)
+         .add(.rearCamera)
+         .add(.frontCamera).show {
+         sender.setImage($0, for: .normal)
+         }
+         
+         */
+        
+        //  Example 3 - Create custom actionsheet with custom params
+        
+        /*
+         
+         MSActionSheet(viewController: self, sourceView: sender)
+         .add(.frontCamera, title: "Selfie camera", image: #imageLiteral(resourceName: "msactionsheet_selfie"))
+         .add(.rearCamera, defaultImage: true)
+         .setTint(color: .purple)
+         .add(.cancel, style: .destructive)
+         .show {
+         sender.setImage($0, for: .normal)
+         }
+         
+         */
+        
+        
+        //  Example 4 - Create custom actionsheet with custom actions
+        
+        /*
+         
+         MSActionSheet(viewController: self, sourceView: sender)
+         .add(.library, defaultImage: true)
+         .addCustom(title: "Print", isDestructive: false, image: #imageLiteral(resourceName: "print_photo")) {
+         print("Printing the photo")
+         }.addCustom(title: "Share", isDestructive: true, image: #imageLiteral(resourceName: "share_photo")) {
+         print("Sharing the photo")
+         }.add(.cancel)
+         .show {
+         sender.setImage($0, for: .normal)
+         }
+         
          */
         
     }

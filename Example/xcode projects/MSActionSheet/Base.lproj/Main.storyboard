@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,13 +24,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qta-wc-joH">
-                                <rect key="frame" x="12.5" y="158" width="350" height="350"/>
+                                <rect key="frame" x="57" y="202" width="262.5" height="262.5"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="350" id="L2u-CY-bMd"/>
-                                    <constraint firstAttribute="height" constant="350" id="MDr-aV-bus"/>
+                                    <constraint firstAttribute="width" secondItem="Qta-wc-joH" secondAttribute="height" multiplier="1:1" id="8jt-Kt-fYE"/>
                                 </constraints>
                                 <state key="normal" title="Select picture">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="selectImageAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vg6-yZ-1M4"/>
@@ -37,8 +39,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Qta-wc-joH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="34h-1P-GkN"/>
-                            <constraint firstItem="Qta-wc-joH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5wB-8p-E2b"/>
+                            <constraint firstItem="Qta-wc-joH" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="Pt1-Dm-h7R"/>
+                            <constraint firstItem="Qta-wc-joH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UAQ-Qn-App"/>
+                            <constraint firstItem="Qta-wc-joH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uwg-BJ-VK5"/>
                         </constraints>
                     </view>
                 </viewController>

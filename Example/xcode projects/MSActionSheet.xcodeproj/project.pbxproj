@@ -10,7 +10,6 @@
 		E13C608E1E982AB600FE6DB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13C608D1E982AB600FE6DB9 /* AppDelegate.swift */; };
 		E13C60901E982AB600FE6DB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13C608F1E982AB600FE6DB9 /* ViewController.swift */; };
 		E13C60931E982AB600FE6DB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E13C60911E982AB600FE6DB9 /* Main.storyboard */; };
-		E13C60961E982AB600FE6DB9 /* MSActionSheet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E13C60941E982AB600FE6DB9 /* MSActionSheet.xcdatamodeld */; };
 		E13C609B1E982AB600FE6DB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E13C60991E982AB600FE6DB9 /* LaunchScreen.storyboard */; };
 		E1CD4FFE1E98CDEA006FB0CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1CD4FFC1E98CDEA006FB0CE /* Assets.xcassets */; };
 		E1CD4FFF1E98CDEA006FB0CE /* MSActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CD4FFD1E98CDEA006FB0CE /* MSActionSheet.swift */; };
@@ -21,7 +20,6 @@
 		E13C608D1E982AB600FE6DB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E13C608F1E982AB600FE6DB9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E13C60921E982AB600FE6DB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E13C60951E982AB600FE6DB9 /* MSActionSheet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MSActionSheet.xcdatamodel; sourceTree = "<group>"; };
 		E13C609A1E982AB600FE6DB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E13C609C1E982AB600FE6DB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1CD4FFC1E98CDEA006FB0CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 				E13C60911E982AB600FE6DB9 /* Main.storyboard */,
 				E13C60991E982AB600FE6DB9 /* LaunchScreen.storyboard */,
 				E13C609C1E982AB600FE6DB9 /* Info.plist */,
-				E13C60941E982AB600FE6DB9 /* MSActionSheet.xcdatamodeld */,
 			);
 			path = MSActionSheet;
 			sourceTree = "<group>";
@@ -97,12 +94,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Maor Shams";
 				TargetAttributes = {
 					E13C60891E982AB600FE6DB9 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = LE75NS246X;
+						DevelopmentTeam = FPKJ9P7BGC;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -146,7 +144,6 @@
 				E13C60901E982AB600FE6DB9 /* ViewController.swift in Sources */,
 				E1CD4FFF1E98CDEA006FB0CE /* MSActionSheet.swift in Sources */,
 				E13C608E1E982AB600FE6DB9 /* AppDelegate.swift in Sources */,
-				E13C60961E982AB600FE6DB9 /* MSActionSheet.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +179,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -190,7 +189,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -233,7 +236,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -241,7 +246,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -271,12 +280,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = LE75NS246X;
+				DEVELOPMENT_TEAM = FPKJ9P7BGC;
 				INFOPLIST_FILE = MSActionSheet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = maor.MSActionSheet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -284,12 +295,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = LE75NS246X;
+				DEVELOPMENT_TEAM = FPKJ9P7BGC;
 				INFOPLIST_FILE = MSActionSheet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = maor.MSActionSheet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -315,19 +328,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		E13C60941E982AB600FE6DB9 /* MSActionSheet.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				E13C60951E982AB600FE6DB9 /* MSActionSheet.xcdatamodel */,
-			);
-			currentVersion = E13C60951E982AB600FE6DB9 /* MSActionSheet.xcdatamodel */;
-			path = MSActionSheet.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = E13C60821E982AB600FE6DB9 /* Project object */;
 }

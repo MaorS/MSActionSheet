@@ -1,10 +1,10 @@
 ![MSActionSheet: Logo](http://i.imgur.com/UkbNlEj.png)
 
 ![CocoaPods MSActionSheet](http://i.imgur.com/ys0rzRs.png)
-![MSActionSheet Version](http://i.imgur.com/1LmYVqf.png)
 ![MSActionSheet Platform](http://i.imgur.com/S79aHIK.png)
 
-Customized ActionSheet for taking photo from library / front / rear camera
+# Customized ActionSheet for taking photo from library / front / rear camera or custom buttons.
+##### Now supporting iPad
 
 ![MSActionSheet: screenshot](https://raw.githubusercontent.com/MaorS/MSActionSheet/master/Example/media/screenshots.png)
 
@@ -21,47 +21,47 @@ Drag and drop MSActionSheet.swift and Assets into your project
 
 ## Usage - long way
 
-### Creating new ActionSheet
+### Creating new ActionSheet, When the user select the image, get selected Image:
 
 ```swift
-let sheet = MSActionSheet.instance
-sheet.create().addLibrary().addRearCamera().addFrontCamera().addCancelButton().show(on: self)
-```
-
-### Handler when user finish picking, get selected Image:
-
-```swift
-.show(on: self) { (image) in
-// Your code here
+MSActionSheet(viewController: self, sourceView: sender)
+.add(.library)
+.add(.rearCamera)
+.add(.frontCamera)
+.add(.cancel).show { (image) in
 }
 ```
-
-
-
 ## Usage - Short way
 ### Creating new ActionSheet, when user finish picking get image
 
 ```swift
-MSActionSheet.instance.showFullActionSheet(on: self){ (image) in
-// Your code here
+MSActionSheet(viewController: self, sourceView: sender).showFullActionSheet {
+sender.setImage($0, for: .normal)
 }
 ```
 
 ## Customizing
-#### Adding custom titles and images
-You can set custom title or message or both
-
+Set custom title, image, style :
 ```swift
-sheet.create(title: "Select Image", message: "Another text..")
+.add(.frontCamera, title: "Take a Selfie", style: .destructive, image: #imageLiteral(resourceName: "my_image"))
 ```
-You can mix between action options
+Use the default image :
 ```swift
-.addFrontCamera(title: "Take a selfie", destructive: true, image: #imageLiteral(resourceName: "selfie"))
+.add(.rearCamera, defaultImage: true)
 ```
-
-#### Adding custom tint color to ActionSheet
+Add custom buttons :
 ```swift
-.tintColor(color: .red)
+.addCustom(title: "Print", image: #imageLiteral(resourceName: "print_photo")) {
+// action when the user click on "Print button"
+print("Printing the photo")
+}.addCustom(title: "Share", image: #imageLiteral(resourceName: "share_photo")) {
+// action when the user click on "Share button"
+print("Sharing the photo")
+}
+```
+Set ActionSheet tint color
+```swift
+.setTint(color: .purple)
 ```
 
 
@@ -72,10 +72,7 @@ Please make sure to enable in Info.plist
 ```Privacy - Camera Usage Description```
 ![MSActionSheet: Customized ActionSheet for taking photo from library / front / rear camera](http://i.imgur.com/oAeYJwy.png)
 
-### Short tutorial
-
-![MSActionSheet: Customized ActionSheet for taking photo from library / front / rear camera](https://github.com/MaorS/MSActionSheet/blob/master/Example/media/fullActionSheet.gif?raw=true)
-
 
 # License
 MSActionSheet is available under the MIT license. See the LICENSE file for more info.
+
