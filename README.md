@@ -25,10 +25,10 @@ Drag and drop MSActionSheet.swift and Assets into your project
 
 ```swift
 MSActionSheet(viewController: self, sourceView: sender)
-.add(.library)
-.add(.rearCamera)
-.add(.frontCamera)
-.add(.cancel).show { (image) in
+    .add(.library)
+    .add(.rearCamera)
+    .add(.frontCamera)
+    .add(.cancel).show { (image) in
 }
 ```
 ## Usage - Short way
@@ -36,7 +36,7 @@ MSActionSheet(viewController: self, sourceView: sender)
 
 ```swift
 MSActionSheet(viewController: self, sourceView: sender).showFullActionSheet {
-sender.setImage($0, for: .normal)
+    sender.setImage($0, for: .normal)
 }
 ```
 
@@ -52,11 +52,11 @@ Use the default image :
 Add custom buttons :
 ```swift
 .addCustom(title: "Print", image: #imageLiteral(resourceName: "print_photo")) {
-// action when the user click on "Print button"
-print("Printing the photo")
+    // action when the user click on "Print button"
+    print("Printing the photo")
 }.addCustom(title: "Share", image: #imageLiteral(resourceName: "share_photo")) {
-// action when the user click on "Share button"
-print("Sharing the photo")
+    // action when the user click on "Share button"
+    print("Sharing the photo")
 }
 ```
 Set ActionSheet tint color
